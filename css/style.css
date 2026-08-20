@@ -1,0 +1,620 @@
+/* ========================================
+   CSS RESET
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+    background-color: white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ========================================
+   GENERAL STYLES
+   ======================================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h3 {
+    line-height: 1.2;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #c78c06;
+    color: #222;
+    font-weight: 600;
+}
+
+.button span,
+.service-button span {
+    margin-left: 8px;
+}
+
+.button:hover,
+.service-button:hover,
+.send-button:hover {
+    background-color: #222;
+    color: white;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.site-header {
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.logo-link {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.logo-link img {
+    width: 98px;
+    height: 97px;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-nav a {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #c78c06;
+    font-size: 0.9rem;
+}
+
+.main-nav a.active {
+    background-color: #c78c06;
+    color: #222;
+}
+
+.main-nav a:hover {
+    background-color: #c78c06;
+    color: #222;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.search-form input {
+    width: 100%;
+    min-width: 0;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    width: 35px;
+    height: 30px;
+    border: 0;
+    background-color: #222;
+    color: #c78c06;
+    cursor: pointer;
+    border: 1px solid #c78c06;
+}
+
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+    min-height: 400px;
+    padding: 70px 0;
+    background-image: url("../images/main-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    padding: 25px 15px;
+    background-color: rgba(34, 34, 34, 0.75);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   ABOUT
+   ======================================== */
+
+.about {
+    background-color: #ffe6ac;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   SERVICES
+   CSS GRID IS USED HERE
+   ======================================== */
+
+.services {
+    background-color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.service-card {
+    background-color: #ffe6ac;
+}
+
+.service-card img {
+    width: 100%;
+}
+
+.service-content {
+    padding: 15px;
+}
+
+.service-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.service-content p {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.service-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   VISION
+   ======================================== */
+
+.vision {
+    padding: 40px 0;
+    background-image: url("../images/vision.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.vision-content {
+    padding: 15px;
+}
+
+.vision h2 {
+    font-size: 1.8rem;
+}
+
+.vision p {
+    margin-bottom: 20px;
+}
+
+.vision-button {
+    background-color: rgba(34, 34, 34, 0.85);
+    color: white;
+    border: 1px solid #c78c06;
+}
+
+
+/* ========================================
+   TEAM
+   ======================================== */
+
+.team {
+    background-color: white;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffe6ac;
+}
+
+.team-member img {
+    width: 100%;
+}
+
+.team-info {
+    padding: 15px;
+}
+
+.team-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 2px;
+}
+
+.team-info h4 {
+    font-size: 0.8rem;
+    border-bottom: 2px solid #c78c06;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.team-info p {
+    font-size: 0.8rem;
+}
+
+
+/* ========================================
+   CONTACT
+   ======================================== */
+
+.contact {
+    background-color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.contact h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.75rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #999;
+    padding: 5px;
+}
+
+.form-group input {
+    height: 28px;
+}
+
+.form-group textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.send-button {
+    padding: 5px 8px;
+    border: 0;
+    background-color: #c78c06;
+    color: #222;
+    cursor: pointer;
+}
+
+.location iframe {
+    width: 100%;
+    min-height: 260px;
+    border: 0;
+}
+
+.hours {
+    margin-top: 25px;
+}
+
+.hours h3 {
+    margin-bottom: 10px;
+}
+
+.hours table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+}
+
+.hours th,
+.hours td {
+    padding: 10px;
+    border: 1px solid #999;
+    text-align: left;
+}
+
+.hours th {
+    background-color: #ffe6ac;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+    background-color: #222;
+    color: #c78c06;
+    padding: 20px 0;
+    font-size: 0.7rem;
+}
+
+.site-footer p {
+    margin-bottom: 5px;
+}
+
+
+/* ========================================
+   TABLET / DESKTOP
+   Minimum width: 760px
+   ======================================== */
+
+@media screen and (min-width: 760px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Header uses Flexbox */
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo-link {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .logo-link img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .main-nav a {
+        width: auto;
+        padding: 15px 18px;
+    }
+
+    .search-form {
+        width: 160px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .hero {
+        min-height: 450px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 850px;
+        padding: 35px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    /* About becomes a two-column layout */
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* Services use CSS Grid */
+    .services-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+    }
+
+    .service-large {
+        grid-column: span 3;
+    }
+
+    .service-card:not(.service-large) {
+        grid-column: span 2;
+    }
+
+    .service-content {
+        min-height: 210px;
+    }
+
+    /* Team becomes a two-column grid */
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-member {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-member:nth-child(2) img {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .team-member:nth-child(2) .team-info {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* Contact becomes two columns */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .location iframe {
+        min-height: 300px;
+    }
+
+    .hours {
+        max-width: 100%;
+    }
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+   ======================================== */
+
+@media screen and (min-width: 1000px) {
+
+    .logo-link img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content {
+        max-width: 900px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-content {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .service-content {
+        min-height: 225px;
+    }
+
+    .team-info {
+        padding: 20px;
+    }
+}
